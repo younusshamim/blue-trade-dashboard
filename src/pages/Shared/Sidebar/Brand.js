@@ -2,8 +2,11 @@ import { Box, HStack, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import { logo } from "../../../assets/images";
+import useColors from "../../../hooks/useColors";
 
 const Brand = () => {
+  const { textColor } = useColors();
+
   return (
     <Link to="/">
       <HStack
@@ -22,7 +25,7 @@ const Brand = () => {
           cursor="pointer"
         >
           <Box color="primary.500">Blue</Box>
-          <Box>Trade.</Box>
+          <Box color={textColor}>Trade.</Box>
         </Heading>
       </HStack>
     </Link>

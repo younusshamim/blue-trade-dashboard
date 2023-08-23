@@ -4,15 +4,18 @@ import { Box, Divider, Flex, VStack } from "@chakra-ui/react";
 import { list1, list2 } from "../../../data/sidebarData";
 import SidebarItem from "./SidebarItem";
 import Brand from "./Brand";
+import useColors from "../../../hooks/useColors";
 
 const Sidebar = ({ onClose, ...rest }) => {
+  const { componentBg, borderColor, dividerColor } = useColors();
+
   return (
     <Flex
       m="0"
-      background="white"
+      background={componentBg}
       direction="column"
       borderRightWidth="2px"
-      borderRightColor="gray.100"
+      borderRightColor={borderColor}
       w={{ base: "full", md: "307px" }}
       h="100vh"
       p="41px 49px"
@@ -28,7 +31,7 @@ const Sidebar = ({ onClose, ...rest }) => {
       </VStack>
 
       <Box mx="5" my="10">
-        <Divider borderColor="gray.200" borderWidth="1.5px" />
+        <Divider borderColor={dividerColor} borderWidth="1.5px" />
       </Box>
 
       <VStack align="flex-start" gap="2">

@@ -10,6 +10,7 @@ import {
 import React from "react";
 import { progressLine } from "../../../assets/vector";
 import Badge from "../../../components/Badge";
+import useColors from "../../../hooks/useColors";
 
 const SingleCard = ({ card }) => {
   const {
@@ -26,8 +27,10 @@ const SingleCard = ({ card }) => {
     lineColor,
   } = card;
 
+  const { componentBg } = useColors();
+
   return (
-    <Stack background="white" p="7" borderRadius="12px" gap="5">
+    <Stack background={componentBg} p="7" borderRadius="12px" gap="5">
       <HStack justify="space-between">
         <HStack gap="4">
           <Icon as={icon} boxSize="44px" />

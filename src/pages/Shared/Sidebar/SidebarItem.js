@@ -1,11 +1,13 @@
 import React from "react";
 import { Box, HStack, Icon, Text, useMediaQuery } from "@chakra-ui/react";
 import { useLocation, useNavigate } from "react-router-dom";
+import useColors from "../../../hooks/useColors";
 
 const SidebarItem = ({ onClose, item: { svg, name, link } }) => {
   let { pathname } = useLocation();
   const [isLargerThanMd] = useMediaQuery("(min-width: 768px)");
   const navigate = useNavigate();
+  const { textColor } = useColors();
 
   const handleItemClick = () => {
     if (link) {
@@ -24,7 +26,7 @@ const SidebarItem = ({ onClose, item: { svg, name, link } }) => {
       cursor="pointer"
       fontWeight={500}
       transition="0.3s"
-      color={pathname === link ? "primary.500" : "black"}
+      color={pathname === link ? "primary.500" : textColor}
       bg={pathname === link ? "primary.50" : ""}
       _hover={{ color: "primary.500" }}
       className="menuItem"
@@ -33,7 +35,7 @@ const SidebarItem = ({ onClose, item: { svg, name, link } }) => {
         <Icon
           as={svg}
           boxSize={"15px"}
-          color={pathname === link ? "primary.500" : "black"}
+          color={pathname === link ? "primary.500" : textColor}
           transition="0.3s"
           sx={{
             ".menuItem:hover &": {
