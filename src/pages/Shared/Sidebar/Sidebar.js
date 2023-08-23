@@ -8,11 +8,12 @@ import Brand from "./Brand";
 const Sidebar = ({ onClose, ...rest }) => {
   return (
     <Flex
+      m="0"
       background="white"
       direction="column"
       borderRightWidth="2px"
       borderRightColor="gray.100"
-      w="307px"
+      w={{ base: "full", md: "307px" }}
       h="100vh"
       p="41px 49px"
       position="fixed"

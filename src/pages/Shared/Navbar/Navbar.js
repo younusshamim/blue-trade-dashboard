@@ -20,7 +20,7 @@ const Navbar = () => {
       <MobileMenu />
       <SearchField />
 
-      <HStack gap="3">
+      <HStack>
         <CustomIcon>
           <Icon as={notification} boxSize={"25px"} />
         </CustomIcon>

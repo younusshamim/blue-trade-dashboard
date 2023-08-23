@@ -7,10 +7,8 @@ const CustomIcon = ({ children, ...rest }) => {
       transition="0.2"
       _hover={{ background: "gray.50" }}
       _active={{ background: "gray.100" }}
-      p="5px"
+      p="5px 5px 0px 5px"
       borderRadius="md"
-      align="center"
-      justify="center"
       cursor="pointer"
       {...rest}
     >

@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Box,
   Flex,
   HStack,
   Heading,
@@ -23,67 +24,90 @@ const menuItems = [
   { id: 2, name: "Logout", icon: FiLogOut },
 ];
 
-const UserCard = () => {
+const MenuItems = () => {
   return (
-    <HStack
-      bg="primary.50"
-      borderRadius="13px"
-      w="256px"
-      h="59px"
-      alignItems="center"
-      justify="space-between"
-      pl="15px"
-      pr="5px"
-    >
-      <HStack>
-        <Image
-          src={user}
-          alt=""
-          rounded="50%"
-          h="40px"
-          w="40px"
-          objectFit="cover"
-        />
+    <MenuList>
+      {menuItems.map((item) => (
+        <MenuItem p="10px 30px">
+          <HStack gap="5">
+            <Icon as={item.icon} boxSize={"15px"} />
+            <Text cursor="pointer" fontSize="14px">
+              {item.name}
+            </Text>
+          </HStack>
+        </MenuItem>
+      ))}
+    </MenuList>
+  );
+};
 
-        <Flex direction="column">
-          <Heading fontSize="14px" fontWeight="semibold">
-            Younus Shamim
-          </Heading>
-          <Text fontSize="11px" color="gray.500">
-            shamim.bd@gmail.com
-          </Text>
-        </Flex>
-      </HStack>
-
-      <Menu>
-        <MenuButton>
-          <CustomIcon>
-            <Icon
-              as={HiOutlineDotsVertical}
-              boxSize={"20px"}
-              color="gray.500"
+const UserCard = ({ ...rest }) => {
+  return (
+    <Flex>
+      <Flex display={{ base: "flex", md: "none" }}>
+        <Menu>
+          <MenuButton>
+            <Image
+              src={user}
+              alt=""
+              rounded="50%"
+              h="40px"
+              w="40px"
+              objectFit="cover"
             />
-          </CustomIcon>
-        </MenuButton>
+          </MenuButton>
+          <MenuItems />
+        </Menu>
+      </Flex>
 
-        <MenuList>
-          {menuItems.map((item) => (
-            <MenuItem p="10px 20px">
-              <HStack gap="5">
-                <Icon as={item.icon} boxSize={"18px"} />
-                <Text cursor="pointer" fontSize="15px">
-                  {item.name}
-                </Text>
-              </HStack>
-            </MenuItem>
-          ))}
-        </MenuList>
-      </Menu>
+      <HStack
+        bg="primary.50"
+        borderRadius="13px"
+        w="256px"
+        h="59px"
+        alignItems="center"
+        justify="space-between"
+        pl="15px"
+        pr="5px"
+        ml="5px"
+        {...rest}
+        display={{ base: "none", md: "flex" }}
+      >
+        <HStack>
+          <Image
+            src={user}
+            alt=""
+            rounded="50%"
+            h="40px"
+            w="40px"
+            objectFit="cover"
+          />
 
-      {/* <CustomIcon>
-        <Icon as={HiOutlineDotsVertical} boxSize={"25px"} color="gray.500" />
-      </CustomIcon> */}
-    </HStack>
+          <Flex direction="column">
+            <Heading fontSize="14px" fontWeight="semibold">
+              Younus Shamim
+            </Heading>
+            <Text fontSize="11px" color="gray.500">
+              shamim.bd@gmail.com
+            </Text>
+          </Flex>
+        </HStack>
+
+        <Menu>
+          <MenuButton>
+            <CustomIcon>
+              <Icon
+                as={HiOutlineDotsVertical}
+                boxSize={"20px"}
+                color="gray.500"
+              />
+            </CustomIcon>
+          </MenuButton>
+
+          <MenuItems />
+        </Menu>
+      </HStack>
+    </Flex>
   );
 };
 

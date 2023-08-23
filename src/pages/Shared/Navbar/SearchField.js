@@ -8,7 +8,7 @@ const SearchField = () => {
       borderWidth="1px"
       borderColor="gray.100"
       borderRadius="57px"
-      w="626px"
+      w={{ base: "60%", md: "626px" }}
       h="50px"
       position="relative"
     >
