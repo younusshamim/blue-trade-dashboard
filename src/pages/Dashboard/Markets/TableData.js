@@ -17,7 +17,7 @@ const TableData = () => {
               {item.subtitle}
             </CustomTd>
             <CustomTd fontWeight="500">{item.amount}</CustomTd>
-            <CustomTd pr="0">
+            <CustomTd pr="0px">
               <Badge colorType={item.status} w="58px">
                 {item.percentage}
               </Badge>

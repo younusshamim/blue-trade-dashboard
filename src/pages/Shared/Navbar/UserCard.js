@@ -88,7 +88,7 @@ const UserCard = ({ ...rest }) => {
               Younus Shamim
             </Heading>
             <Text fontSize="11px" color="gray.500">
-              shamim.bd@gmail.com
+              younus@gmail.com
             </Text>
           </Flex>
         </HStack>

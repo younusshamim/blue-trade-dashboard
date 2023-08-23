@@ -34,9 +34,7 @@ const Markets = () => {
 
       <TableData />
 
-      <BorderedBtn alignSelf="flex-end" m="10px">
-        View All
-      </BorderedBtn>
+      <BorderedBtn alignSelf="flex-end">View All</BorderedBtn>
     </View>
   );
 };

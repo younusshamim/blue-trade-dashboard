@@ -18,7 +18,10 @@ const BorderedBtn = ({
       borderRadius="7px"
       borderWidth="1px"
       borderColor="gray.100"
+      color="gray.400"
       background={background}
+      _hover={{ background: "gray.50" }}
+      _active={{ background: "gray.100" }}
       {...rest}
     >
       {children}
