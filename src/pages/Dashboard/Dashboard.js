@@ -1,11 +1,27 @@
 import React from "react";
-import { Stack } from "@chakra-ui/react";
+import { HStack, Stack } from "@chakra-ui/react";
 import TopCards from "./TopCards/TopCards";
+import BtcusdtChart from "./BtcusdtChart/BtcusdtChart";
+import Markets from "./Markets/Markets";
+import AssetsChart from "./AssetsChart/AssetsChart";
+import Convert from "./Convert/Convert";
+import History from "./History/History";
 
 const Dashboard = () => {
   return (
-    <Stack w="full">
+    <Stack w="full" gap={6}>
       <TopCards />
+
+      <HStack w="full" gap={6} alignItems="flex-start">
+        <BtcusdtChart />
+        <Markets />
+      </HStack>
+
+      <HStack w="full" gap={6} alignItems="flex-start">
+        <AssetsChart />
+        <Convert />
+        <History />
+      </HStack>
     </Stack>
   );
 };
