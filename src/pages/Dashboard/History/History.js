@@ -14,10 +14,6 @@ const History = () => {
       </HStack>
 
       <TableData />
-
-      <BorderedBtn alignSelf="flex-end" m="10px">
-        View All
-      </BorderedBtn>
     </View>
   );
 };
