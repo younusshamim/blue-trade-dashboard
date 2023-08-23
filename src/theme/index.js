@@ -3,10 +3,12 @@ import config from "./config";
 import direction from "./direction";
 import colors from "./foundations/colors";
 import components from "./foundations/components";
+import fonts from "./foundations/fonts";
 
 const theme = extendTheme({
   direction,
   colors,
+  fonts,
   components,
   config,
 });

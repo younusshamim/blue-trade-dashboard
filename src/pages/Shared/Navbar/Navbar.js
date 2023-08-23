@@ -1,66 +1,31 @@
 //@ts-check
 import React from "react";
-import {
-  Box,
-  Flex,
-  HStack,
-  Heading,
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Text,
-} from "@chakra-ui/react";
-import { AiOutlineSetting } from "react-icons/ai";
-import { IoIosNotificationsOutline } from "react-icons/io";
-import { AiOutlineUser } from "react-icons/ai";
-import { FiLogOut } from "react-icons/fi";
+import { Flex, HStack, Icon } from "@chakra-ui/react";
 import MobileMenu from "./MobileMenu";
+import { notification } from "../../../assets/icons";
+import SearchField from "./SearchField";
+import CustomIcon from "../../../components/CustomIcon";
+import UserCard from "./UserCard";
 
 const Navbar = () => {
-  const menuItems = [
-    { id: 1, name: "My Profile", icon: <AiOutlineUser /> },
-    { id: 2, name: "Logout", icon: <FiLogOut /> },
-  ];
-
   return (
-    <Flex justify="space-between" mb="5" w="100%">
+    <Flex
+      justify="space-between"
+      w="100%"
+      h="98px"
+      px={{ base: "20px", md: "33px" }}
+      align="center"
+      background="white"
+    >
       <MobileMenu />
+      <SearchField />
 
-      <Heading fontSize="22px">Hi</Heading>
+      <HStack gap="3">
+        <CustomIcon>
+          <Icon as={notification} boxSize={"25px"} />
+        </CustomIcon>
 
-      <HStack>
-        {/* <InputGroup bg="gray.100" size="sm">
-          <InputLeftElement
-            pointerEvents="none"
-            children={<BsSearch color="gray.300" />}
-          />
-          <Input type="text" placeholder="Search.." />
-        </InputGroup> */}
-
-        <IconButton
-          icon={<IoIosNotificationsOutline />}
-          size="sm"
-          fontSize="20px"
-        />
-
-        <Menu>
-          <MenuButton>
-            <IconButton icon={<AiOutlineSetting />} size="sm" fontSize="20px" />
-          </MenuButton>
-
-          <MenuList color="black" minW="180px">
-            {menuItems.map((menu, i) => (
-              <MenuItem key={menu + i} >
-                <HStack py="5px" fontSize="15px">
-                  <Box>{menu.icon}</Box>
-                  <Text>{menu.name}</Text>
-                </HStack>
-              </MenuItem>
-            ))}
-          </MenuList>
-        </Menu>
+        <UserCard />
       </HStack>
     </Flex>
   );

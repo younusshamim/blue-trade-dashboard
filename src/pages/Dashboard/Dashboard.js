@@ -1,7 +1,12 @@
 import React from "react";
+import { Flex, Heading } from "@chakra-ui/react";
 
 const Dashboard = () => {
-  return <div></div>;
+  return (
+    <Flex>
+      <Heading>Hi</Heading>
+    </Flex>
+  );
 };
 
 export default Dashboard;

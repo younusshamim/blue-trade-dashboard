@@ -6,17 +6,20 @@ import { Flex } from "@chakra-ui/react";
 
 const Main = () => {
   return (
-    <Flex>
-      <Sidebar display={{ base: 'none', md: 'flex' }} />
+    <Flex background="primary.50">
+      <Sidebar display={{ base: "none", md: "flex" }} />
 
       <Flex
         direction="column"
-        p={{ base: "20px 10px", md: "5" }}
-        w={{ base: "100%", md: "calc(100% - 250px)" }}
-        ml={{ md: "250px" }}
+        w={{ base: "100%", md: "calc(100vw - 307px)" }}
+        minH="100vh"
+        ml={{ md: "307px" }}
       >
         <Navbar />
-        <Outlet />
+
+        <Flex p={{ base: "15px 20px", md: "28px 33px" }} h="full" w="full">
+          <Outlet />
+        </Flex>
       </Flex>
     </Flex>
   );
