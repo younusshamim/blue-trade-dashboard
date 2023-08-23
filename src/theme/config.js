@@ -1,6 +1,6 @@
 const config = {
   useSystemColorMode: false,
-  initialColorMode: "light",
+  initialColorMode: "dark",
   cssVarPrefix: "ckds",
 };
 
