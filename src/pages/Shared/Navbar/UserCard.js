@@ -27,8 +27,8 @@ const menuItems = [
 const MenuItems = () => {
   return (
     <MenuList>
-      {menuItems.map((item) => (
-        <MenuItem p="10px 30px">
+      {menuItems.map((item, i) => (
+        <MenuItem p="10px 30px" key={i}>
           <HStack gap="5">
             <Icon as={item.icon} boxSize={"15px"} />
             <Text cursor="pointer" fontSize="14px">

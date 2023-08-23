@@ -1,11 +1,12 @@
 import React from "react";
-import { Flex, Heading } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
+import TopCards from "./TopCards/TopCards";
 
 const Dashboard = () => {
   return (
-    <Flex>
-      <Heading>Hi</Heading>
-    </Flex>
+    <Stack w="full">
+      <TopCards />
+    </Stack>
   );
 };
 

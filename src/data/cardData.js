@@ -1,0 +1,63 @@
+import { bitcoin, ethereum, solana, wallet } from "../assets/icons";
+import { AiOutlineEye } from "react-icons/ai";
+
+const cardData = [
+  {
+    id: 1,
+    icon: wallet,
+    title: "Estimated Balance",
+    titleIcon: AiOutlineEye,
+    subTitle: "",
+    total: "$123,987",
+    amountTitle: "Monthly Profit",
+    amount: "+$2560.78",
+    positiveAmount: true,
+    percentage: "+14.67%",
+    positivePercentage: true,
+    lineColor: "",
+  },
+  {
+    id: 2,
+    icon: bitcoin,
+    title: "BTCUSDT",
+    titleIcon: "",
+    subTitle: "Bitcoin",
+    total: "$23,738",
+    amountTitle: "PNL Daily",
+    amount: "-$16.78",
+    positiveAmount: false,
+    percentage: "+14.67%",
+    positivePercentage: true,
+    lineColor: "yellow.500",
+  },
+  {
+    id: 3,
+    icon: ethereum,
+    title: "ETHUSDT",
+    titleIcon: "",
+    subTitle: "Ethereum",
+    total: "$23,738",
+    amountTitle: "PNL Daily",
+    amount: "-$189.91",
+    positiveAmount: true,
+    percentage: "+24.68%",
+    positivePercentage: true,
+    lineColor: "purple.500",
+  },
+  {
+    id: 4,
+    icon: solana,
+    title: "SOLUSDT",
+    titleIcon: "",
+    subTitle: "Solana",
+    total: "$23,738",
+    amountTitle: "PNL Daily",
+    amount: "+$556.14",
+    positiveAmount: true,
+    percentage: "+64.11%",
+    positivePercentage: true,
+    lineColor: "negative.500",
+  },
+];
+
+export default cardData;
