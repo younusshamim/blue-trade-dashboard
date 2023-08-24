@@ -9,6 +9,7 @@ const useColors = () => {
   const inputBg = useColorModeValue("#F9F9FA", "#12131A");
   // text
   const textColor = useColorModeValue("black", "white");
+  // border 
   const borderColor = useColorModeValue("gray.100", "#2A2A32");
   const sidebarBorderColor = useColorModeValue("gray.50", "#1C1C25");
 

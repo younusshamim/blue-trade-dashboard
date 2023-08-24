@@ -7,80 +7,85 @@ import ReactApexChart from "react-apexcharts";
 import useColors from "../../../hooks/useColors";
 
 const BtcusdtChart = () => {
-  const { textColor } = useColors();
+  const { textColor, sidebarBorderColor } = useColors();
   const [selectedTab, setSelectedTab] = useState("1H");
   const tabList = ["1H", "3H", "5H", "1D", "1W", "1M"];
 
-  const labelItems = ["BTC", "ETH", "ADA", "Others"];
   const series = [
     {
       data: [
         {
-          x: new Date(1538778600000),
-          y: [6629.81, 6650.5, 6623.04, 6633.33],
+          x: 'Jul 18',
+          y: [20100, 21200, 22300, 19100],
         },
         {
-          x: new Date(1538780400000),
-          y: [6632.01, 6643.59, 6620, 6630.11],
+          x: 'Jul 19',
+          y: [19100, 21200, 20300, 23100]
         },
         {
-          x: new Date(1538782200000),
-          y: [6630.71, 6648.95, 6623.34, 6635.65],
+          x: 'Jul 20',
+          y: [21100, 19200, 20300, 21100]
         },
         {
-          x: new Date(1538784000000),
-          y: [6635.65, 6651, 6629.67, 6638.24],
+          x: 'Jul 21',
+          y: [22100, 21200, 23300, 19100]
+        },
+        {
+          x: 'Jul 22',
+          y: [19100, 21200, 20300, 21100]
         },
       ],
     },
   ];
 
   const options = {
+    plotOptions: {
+      candlestick: {
+        colors: {
+          upward: '#3380ff',
+          downward: '#e6efff'
+        },
+      }
+    },
     chart: {
       foreColor: textColor,
       type: "candlestick",
       height: 350,
+      toolbar: {
+        show: false
+      }
     },
     xaxis: {
-      type: "datetime",
-    },
-    yaxis: {
-      tooltip: {
-        enabled: true,
+      labels: {
+        style: {
+          colors: '#718096'
+        }
       },
     },
-
-    // colors: ["#2F80ED", "#B1D3FF", "#00C4DF", "#155AB6"],
-    // plotOptions: {
-    //   pie: {
-    //     donut: {
-    //       labels: {
-    //         show: false,
-    //       },
-    //     },
-    //   },
-    // },
-    //   legend: {
-    //     show: true,
-    //     labels: {
-    //       colors: "#3380ff",
-    //     },
-    //     markers: {
-    //       radius: 0,
-    //     },
-    //     position: "bottom",
-    //   },
-    //   labels: labelItems,
-    //   dataLabels: {
-    //     enabled: false,
-    //     dropShadow: {
-    //       enabled: false,
-    //     },
-    //   },
+    yaxis: {
+      type: 'category',
+      labels: {
+        formatter: function (val) {
+          return '$' + val
+        },
+        style: {
+          colors: '#718096'
+        }
+      },
+      tooltip: {
+        enabled: true
+      }
+    },
+    grid: {
+      borderColor: sidebarBorderColor,
+    },
+    tooltip: {
+      enabled: true,
+    },
   };
 
   return (
-    <View w={{ base: "100%", md: "60%" }}>
+    <View w={{ base: "100%", md: "60%" }} overflow="hidden">
       <Flex
         justify="space-between"
         alignItems="flex-start"
