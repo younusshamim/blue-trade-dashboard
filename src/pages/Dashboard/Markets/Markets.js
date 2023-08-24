@@ -20,7 +20,7 @@ const Markets = () => {
           Markets
         </ViewHeading>
 
-        <HStack w="100%" overflowX="auto">
+        <HStack w={{ base: "100%", md: "fit-content" }} overflowX="auto">
           {tabList.map((tab) => (
             <Button
               key={tab}

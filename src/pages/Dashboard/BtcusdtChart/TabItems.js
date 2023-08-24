@@ -3,7 +3,11 @@ import React from "react";
 
 const TabItems = ({ tabList, selectedTab, setSelectedTab }) => {
   return (
-    <HStack overflowX="auto" mb={{ base: "3", md: "0" }} w="100%">
+    <HStack
+      overflowX="auto"
+      mb={{ base: "3", md: "0" }}
+      w={{ base: "100%", md: "fit-content" }}
+    >
       {tabList.map((tab) => (
         <Button
           key={tab}
