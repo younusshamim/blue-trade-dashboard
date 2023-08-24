@@ -1,10 +1,13 @@
 import React from "react";
 import { Box, Button, HStack, Icon, Input, Text } from "@chakra-ui/react";
 import { MdArrowDropDown } from "react-icons/md";
+import useColors from "../../../hooks/useColors";
 
 const InputField = ({ btnType, btnValue, value, setValue }) => {
+  const { inputBg } = useColors();
+
   return (
-    <Box borderRadius="7px" h="49px" background="#F9F9FA" position="relative">
+    <Box borderRadius="7px" h="49px" background={inputBg} position="relative">
       <Input
         value={value}
         onChange={(e) => setValue(e.target.value)}

@@ -7,7 +7,7 @@ import Brand from "./Brand";
 import useColors from "../../../hooks/useColors";
 
 const Sidebar = ({ onClose, ...rest }) => {
-  const { componentBg, borderColor, dividerColor } = useColors();
+  const { componentBg, borderColor, sidebarBorderColor } = useColors();
 
   return (
     <Flex
@@ -15,7 +15,7 @@ const Sidebar = ({ onClose, ...rest }) => {
       background={componentBg}
       direction="column"
       borderRightWidth="2px"
-      borderRightColor={borderColor}
+      borderRightColor={sidebarBorderColor}
       w={{ base: "full", md: "307px" }}
       h="100vh"
       p="41px 49px"
@@ -31,7 +31,7 @@ const Sidebar = ({ onClose, ...rest }) => {
       </VStack>
 
       <Box mx="5" my="10">
-        <Divider borderColor={dividerColor} borderWidth="1.5px" />
+        <Divider borderColor={borderColor} borderWidth="1.5px" />
       </Box>
 
       <VStack align="flex-start" gap="2">

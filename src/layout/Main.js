@@ -2,14 +2,14 @@ import React from "react";
 import Navbar from "../pages/Shared/Navbar/Navbar";
 import Sidebar from "../pages/Shared/Sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import useColors from "../hooks/useColors";
 
 const Main = () => {
   const { mainBg } = useColors();
 
   return (
-    <Flex background={mainBg}>
+    <Flex background={mainBg} w="100%">
       <Sidebar display={{ base: "none", md: "flex" }} />
 
       <Flex

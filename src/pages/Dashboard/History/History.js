@@ -7,7 +7,7 @@ import BorderedBtn from "../../../components/buttons/BorderedBtn";
 
 const History = () => {
   return (
-    <View w="50%">
+    <View w={{ base: "100%", md: "50%" }}>
       <HStack justifyContent="space-between" mb="4">
         <ViewHeading>History</ViewHeading>
         <BorderedBtn>View All</BorderedBtn>

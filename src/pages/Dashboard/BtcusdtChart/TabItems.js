@@ -3,7 +3,7 @@ import React from "react";
 
 const TabItems = ({ tabList, selectedTab, setSelectedTab }) => {
   return (
-    <HStack>
+    <HStack overflowX="auto" mb={{ base: "3", md: "0" }} w="100%">
       {tabList.map((tab) => (
         <Button
           key={tab}

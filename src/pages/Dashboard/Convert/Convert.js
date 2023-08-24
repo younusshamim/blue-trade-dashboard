@@ -12,7 +12,7 @@ const Convert = () => {
   const [BTC, setBTC] = useState("0.0043");
 
   return (
-    <View w="25%">
+    <View w={{ base: "100%", md: "25%" }}>
       <HStack justifyContent="space-between" mb="4">
         <ViewHeading>Convert</ViewHeading>
         <BorderedBtn>

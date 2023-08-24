@@ -1,14 +1,17 @@
 import { Box, Input } from "@chakra-ui/react";
 import React from "react";
 import { BsSearch } from "react-icons/bs";
+import useColors from "../../../hooks/useColors";
 
 const SearchField = () => {
+  const { borderColor } = useColors();
+
   return (
     <Box
       borderWidth="1px"
-      borderColor="gray.100"
+      borderColor={borderColor}
       borderRadius="57px"
-      w={{ base: "60%", md: "626px" }}
+      w={{ base: "50%", md: "626px" }}
       h="50px"
       position="relative"
     >

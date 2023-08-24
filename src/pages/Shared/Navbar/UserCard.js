@@ -17,6 +17,7 @@ import CustomIcon from "../../../components/CustomIcon";
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import { setting, user as userIcon } from "../../../assets/icons";
 import { FiLogOut } from "react-icons/fi";
+import useColors from "../../../hooks/useColors";
 
 const menuItems = [
   { id: 1, name: "Profile", icon: userIcon },
@@ -42,6 +43,8 @@ const MenuItems = () => {
 };
 
 const UserCard = ({ ...rest }) => {
+  const { cardBg } = useColors();
+
   return (
     <Flex>
       <Flex display={{ base: "flex", md: "none" }}>
@@ -61,7 +64,7 @@ const UserCard = ({ ...rest }) => {
       </Flex>
 
       <HStack
-        bg="primary.50"
+        bg={cardBg}
         borderRadius="13px"
         w="256px"
         h="59px"

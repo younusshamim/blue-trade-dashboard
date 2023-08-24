@@ -10,11 +10,17 @@ const Markets = () => {
   const tabList = ["All", "Metaverse", "Gaming", "Defi", "NFT"];
 
   return (
-    <View w="40%">
-      <HStack justifyContent="space-between" mb="4">
-        <ViewHeading>Markets</ViewHeading>
+    <View w={{ base: "100%", md: "40%" }}>
+      <HStack
+        justifyContent="space-between"
+        mb="4"
+        flexDirection={{ base: "column", md: "row" }}
+      >
+        <ViewHeading alignSelf="flex-start" mb={{ base: "3", md: "0" }}>
+          Markets
+        </ViewHeading>
 
-        <HStack>
+        <HStack w="100%" overflowX="auto">
           {tabList.map((tab) => (
             <Button
               key={tab}

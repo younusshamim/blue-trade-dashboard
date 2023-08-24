@@ -1,5 +1,6 @@
 import { Button } from "@chakra-ui/react";
 import React from "react";
+import useColors from "../../hooks/useColors";
 
 const BorderedBtn = ({
   h = "26px",
@@ -8,6 +9,8 @@ const BorderedBtn = ({
   children,
   ...rest
 }) => {
+  const { borderColor } = useColors();
+
   return (
     <Button
       h={h}
@@ -17,7 +20,7 @@ const BorderedBtn = ({
       p="5px 10px"
       borderRadius="7px"
       borderWidth="1px"
-      borderColor="gray.100"
+      borderColor={borderColor}
       color="gray.400"
       background={background}
       _hover={{ background: "gray.50" }}

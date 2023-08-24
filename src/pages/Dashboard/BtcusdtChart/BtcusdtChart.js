@@ -9,8 +9,12 @@ const BtcusdtChart = () => {
   const tabList = ["1H", "3H", "5H", "1D", "1W", "1M"];
 
   return (
-    <View w="60%">
-      <Flex justify="space-between" alignItems="flex-start">
+    <View w={{ base: "100%", md: "60%" }}>
+      <Flex
+        justify="space-between"
+        alignItems="flex-start"
+        flexDirection={{ base: "column-reverse", md: "row" }}
+      >
         <HeaderCard />
 
         <TabItems

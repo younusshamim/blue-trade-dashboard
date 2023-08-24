@@ -12,12 +12,22 @@ const Dashboard = () => {
     <Stack w="full" gap={6}>
       <TopCards />
 
-      <HStack w="full" gap={6} alignItems="flex-start">
+      <HStack
+        w="full"
+        gap={6}
+        alignItems="flex-start"
+        flexDirection={{ base: "column", md: "row" }}
+      >
         <BtcusdtChart />
         <Markets />
       </HStack>
 
-      <HStack w="full" gap={6} alignItems="flex-start">
+      <HStack
+        w="full"
+        gap={6}
+        alignItems="flex-start"
+        flexDirection={{ base: "column", md: "row" }}
+      >
         <AssetsChart />
         <Convert />
         <History />

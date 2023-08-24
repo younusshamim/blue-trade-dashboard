@@ -3,13 +3,16 @@ import ViewHeading from "../../../components/ViewHeading";
 import Badge from "../../../components/Badge";
 import { MdArrowDropDown } from "react-icons/md";
 import { HStack, Icon, Stack, Text } from "@chakra-ui/react";
+import useColors from "../../../hooks/useColors";
 
 const HeaderCard = () => {
+  const { inputBg } = useColors();
+
   return (
     <HStack
-      width="334px"
+      width={{ base: "100%", md: "334px" }}
       padding="5"
-      background="#F9F9FA"
+      background={inputBg}
       borderRadius="12px"
       justify="space-between"
     >

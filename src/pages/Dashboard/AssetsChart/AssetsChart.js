@@ -6,7 +6,7 @@ import { HStack, Icon } from "@chakra-ui/react";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 const AssetsChart = () => {
   return (
-    <View w="25%">
+    <View w={{ base: "100%", md: "25%" }}>
       <HStack justifyContent="space-between" mb="4">
         <ViewHeading>Assets</ViewHeading>
         <BorderedBtn>
